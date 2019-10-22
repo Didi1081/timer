@@ -1,0 +1,88 @@
+<script type="text/javascript">
+< !--
+        function hide() {
+            var z = document.getElementById("inputtable");
+            z.style.display = 'none';
+        }
+
+    function diffDatesabs() {
+        var x = document.getElementById("inputabs");
+        var dateOne = x.innerText;
+        var dateOnex = new Date(dateOne);
+
+        var today = new Date();
+
+        var diff = Math.abs(today - dateOnex);
+
+        var finaldiff = Math.ceil(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("diffdateabs").innerHTML = finaldiff;
+    }
+    function diffDatesabsgroup() {
+        var x = document.getElementById("inputabsgroup");
+        var dateOne = x.innerText;
+
+        var dateOnex = new Date(dateOne);
+
+        var today = new Date();
+
+        var diff = Math.abs(today - dateOnex);
+
+        var finaldiff = Math.ceil(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("diffdateabsgroup").innerHTML = finaldiff;
+    }
+    // -->
+</script>
+
+<div style="width: 100%; margin: 0px 0px 0px; padding: 0px;">
+
+    <table id="inputtable" border="1" align="center">
+        <tbody>
+            <tr>
+                <td>INPUT FOR ABS (yyyy/mm/dd)</td>
+                <td id="inputabs">2016/10/08</td>
+            </tr>
+            <tr>
+                <td>INPUT FOR GROUP (yyyy/mm/dd)</td>
+                <td id="inputabsgroup">2015/07/11</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="1">
+        <tbody>
+            <tr style="background-color: #002a4e;">
+                <td colspan="4" style="padding: 20px;">
+                    <p
+                        style="color: #fff; font-family: Helvetica, sans-serif; text-transform: uppercase; text-align: center; font-weight: bold;">
+                        Days Since Lost Time Injury
+                </td>
+            </tr>
+            <tr style="background-color: #002a4e; border-top: 1px solid white;">
+                <td style="padding: 20px; color: #fff; font-family: Helvetica, sans-serif;">BUREAU</td>
+                <td id="diffdateabs"
+                    style="background-color: #da1f33; padding: 20px; color: #fff; font-family: Helvetica, sans-serif;">
+                    xx</td>
+                <td style="padding: 20px; color: #fff; font-family: Helvetica, sans-serif;">GROUP</td>
+                <td id="diffdateabsgroup"
+                    style="background-color: #da1f33; padding: 20px; color: #fff; font-family: Helvetica, sans-serif;">
+                    zz</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+    < !--
+            hide();
+    // -->
+    </script>
+    <script type="text/javascript">
+    < !--
+            diffDatesabs('2012/07/01');
+    // -->
+    </script>
+    <script type="text/javascript">
+    < !--
+            diffDatesabsgroup();
+    // -->
+    </script>
+</div>
